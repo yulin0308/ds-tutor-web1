@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>DS Tutor Lab｜資料結構互動教學網頁</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <div class="logo">DS</div>
+      <div>
+        <div class="brand-title">DS Tutor Lab</div>
+        <div class="brand-sub">Arrays / Stacks & Queues / Linked Lists / Trees / Graphs</div>
+      </div>
+    </div>
+
+    <nav class="tabs" aria-label="主題切換">
+      <button class="tab active" data-view="arrays">Arrays</button>
+      <button class="tab" data-view="stacks">Stacks & Queues</button>
+      <button class="tab" data-view="linkedlists">Linked Lists</button>
+      <button class="tab" data-view="trees">Trees</button>
+      <button class="tab" data-view="graphs">Graphs</button>
+      <button class="tab" data-view="bigO">Big-O</button>
+    </nav>
+  </header>
+
+  <main class="layout">
+    <section class="panel left">
+      <div class="card">
+        <h2 id="viewTitle">Arrays</h2>
+        <p id="viewDesc" class="muted">
+          用最小操作把抽象概念變成看得見：插入、刪除、搜尋、時間複雜度。
+        </p>
+
+        <div class="divider"></div>
+
+        <div class="controls" id="controls"></div>
+
+        <div class="divider"></div>
+
+        <div class="hint">
+          <div class="hint-title">小提示</div>
+          <ul id="hints"></ul>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>操作紀錄</h3>
+        <div id="log" class="log" role="log" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <section class="panel right">
+      <div class="card">
+        <div class="viz-header">
+          <h3>視覺化</h3>
+          <div class="pill" id="complexityPill">Complexity: -</div>
+        </div>
+        <div id="viz" class="viz" aria-label="視覺化區塊"></div>
+      </div>
+
+      <div class="card">
+        <h3>概念筆記</h3>
+        <div id="notes" class="notes"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div>
+      Made for course project · 純前端（HTML/CSS/JS）可直接上傳 GitHub Pages
+    </div>
+    <div class="footer-links">
+      <a href="https://www.bigocheatsheet.com" target="_blank" rel="noreferrer">Big-O Cheat Sheet</a>
+      <span>·</span>
+      <a href="https://visualgo.net/en" target="_blank" rel="noreferrer">VisuAlgo</a>
+      <span>·</span>
+      <a href="https://algorithm-visualizer.org/" target="_blank" rel="noreferrer">Algorithm Visualizer</a>
+    </div>
+  </footer>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>
